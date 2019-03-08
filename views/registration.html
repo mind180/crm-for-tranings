@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration | Welcome</title>
+  <link rel="stylesheet" href="./templates/css/registration.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="page-container">
+
+    <div class="left-side">
+      <div class="form-container">
+
+        <h4>Sign up now to start manage your business.</h4>
+        <p class="sub-title">Please complete all fields</p>
+
+        <form name="regForm"  id="reg_form" action="/registration" method="POST">
+
+          <div id="step1" class="">
+            <div class="field">
+              <input name="login"  type="text" placeholder="Login">
+            </div>
+
+            <div class="field">
+              <input name="password"  type="text" placeholder="Password">
+            </div>
+
+            <div class="field">
+              <input name="password2"  type="text" placeholder="Password again">
+            </div>
+
+            <div class="field">
+              <input class="form_btn" id="next_btn" name="next_btn" type="button" value="Next" >
+            </div>
+          </div>
+
+          <div id="step2" class="hidden">
+            <div class="field">
+              <input name="first_name"  type="text" placeholder="First name">
+            </div>
+
+            <div class="field">
+              <input name="last_name" type="text" placeholder="Last name">
+            </div>
+
+            <div class="field">
+
+              <input name="job_title" type="text" placeholder="Job title">
+            </div>
+
+            <div class="field">
+              <input name="email" type="email" placeholder="Email">
+            </div>
+
+            <div class="field">
+              <input name="phone" type="tel" placeholder="Phone">
+            </div>
+
+            <div class="field">
+              <input name="company" type="text" placeholder="Company">
+            </div>
+
+            <div class="field">
+              <select name="employee" >
+                <option value="">Employees</option>
+                <option value="10">1 - 20 employees</option>
+                <option value="30">21 - 45 employees</option>
+                <option value="100">46 - 200 employees</option>
+                <option value="500"> 201- 1000 employees</option>
+              </select>
+            </div>
+
+            <div class="field btn-container">
+              <div id="back_carret">
+                <i class="fas fa-caret-left"></i>
+              </div>
+              <input class="form_btn" id="do_reg" name="do_reg" type="submit" value="Start your management" >
+            </div>
+          </div>
+
+
+        </form>
+
+      </div>
+    </div>
+
+
+    <div class="right-side">
+
+
+    </div>
+
+
+
+  </div>
+
+  <script src="./templates/js/registrationController.js">
+
+  </script>
+</body>
+</html>
