@@ -1,0 +1,12 @@
+*{
+
+}
+
+body{
+
+}
+
+li > img {
+  display: none;
+  position: absolute;
+}
