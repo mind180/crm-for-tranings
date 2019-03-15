@@ -45,7 +45,6 @@
 
         public function run(){
 
-          //get uri
           $uri = $this->getUri();
 
           //matching request in routes

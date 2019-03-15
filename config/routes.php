@@ -5,7 +5,8 @@
     'login' => 'user/login',
     'registration' => 'user/registration',
     'news' =>  'news/index',
-    'products' => 'product/list',
+    'manage/trainings' => 'manage/trainings', 
+    'manage' => 'manage/home',
     'test' => 'test/test',
   );
 ?>

@@ -25,12 +25,12 @@
 
           <label>
             <p>Username</p>
-            <input name="username" type="text" value="">
+            <input name="username" type="text" value="<?php if(isset($_COOKIE['login'])) { echo $_COOKIE['login']; }  ?>">
           </label>
 
           <label>
             <p>Password</p>
-            <input name="password" type="password" value="">
+            <input name="password" type="password" value="<?php if(isset($_COOKIE['password'])) { echo $this->decryptCookie($_COOKIE['password']); }  ?>">
           </label>
 
           <label>
@@ -38,7 +38,7 @@
           </label>
 
           <label class="remember-checkbox">
-            <input type="checkbox" >
+            <input name="remember_me" type="checkbox" >
             Remember me
           </label>
 

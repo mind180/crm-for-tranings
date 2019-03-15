@@ -5,6 +5,19 @@
   class UserController{
 
 
+    // Encrypt cookie
+    function encryptCookie( $value ) {
+      $key = 'youkey';
+      $newvalue = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $key ), $value, MCRYPT_MODE_CBC, md5( md5( $key ) ) ) );
+      return( $newvalue );
+    }
+
+    // Decrypt cookie
+    function decryptCookie( $value ) {
+      $key = 'youkey';
+      $newvalue = rtrim( mcrypt_decrypt( MCRYPT_RIJNDAEL_256, md5( $key ), base64_decode( $value ), MCRYPT_MODE_CBC, md5( md5( $key ) ) ), "\0");
+      return( $newvalue );
+    }
 
     public function actionLogin(){
 
@@ -13,6 +26,12 @@
 
       if( isset($data["do_login"] ) )
       {
+        if( !empty($data['remember_me']) )
+        {
+          setcookie("login", $data['username'], time() + (3600 * 24 * 30) );
+          setcookie("password", $this->encryptCookie($data["password"]), time() + (3600 * 24 * 30) );
+        }
+        echo $this->encryptCookie($data["password"]);
         $login = $data['username'];
         $password = $data['password'];
 
@@ -38,7 +57,7 @@
         else
         {
           User::auth($userId);
-          header("location: /main");
+          header("location: /manage");
           //return true;
         }
       }
