@@ -43,6 +43,8 @@
           return in_array( $uri, $permitRouts );
         }
 
+
+
         public function run(){
 
           $uri = $this->getUri();
@@ -52,12 +54,13 @@
 
               if( preg_match( "~$uriPattern~", $uri ) ){
 
-                //echo "<br>".$uriPattern;
-                //echo '<br>'. $path;
+                //echo "<br>  uriPattern = ".$uriPattern;
+                //echo '<br> path = '. $path;
+                //echo '<br> uri = '. $uri;
 
                 //replace parameters
                 $internalRoute = preg_replace( "~$uriPattern~", $path, $uri );
-                //echo '<br>'. $internalRoute;
+                //echo '<br> $internalRoute ='. $internalRoute;
 
                 //define coontroller and action
                 $segments = explode('/', $internalRoute);
@@ -71,6 +74,8 @@
 
                 //only params left
                 $params = $segments;
+                //echo "<br> papams: ";
+                //print_r( $params );
 
                 $controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
                 if( file_exists($controllerFile) ){

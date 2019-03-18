@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login | Welcome</title>
-  <link rel="stylesheet" type="text/css" href="../templates/css/login.css" ></link>
+  <link rel="stylesheet" type="text/css" href="/templates/css/login.css" ></link>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
@@ -62,6 +62,6 @@
 
   </div>
 
-  <script type="text/javascript" src="./templates/js/loginController.js"></script>
+  <script type="text/javascript" src="/templates/js/loginController.js"></script>
 </body>
 </html>

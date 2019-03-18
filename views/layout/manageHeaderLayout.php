@@ -1,10 +1,8 @@
-
-
   <header>
     <div class="line-1">
 
       <div class="part-logo">
-        <img alt="LOGO" width="50" height="50px" src="../../templates/images/training-logo.png" title="training-logo.png">
+        <img alt="LOGO" width="50" height="50px" src="/templates/images/training-logo.png" title="training-logo.png">
       </div>
       <div class="part-search">
         <div class="part-search-box" >
@@ -30,12 +28,12 @@
       </div>
       <nav class="part-nav">
         <ul class="part-nav_list" >
-          <li>Home<i class="fas fa-angle-down"></i></li>
-          <li>Training Courses<i class="fas fa-angle-down"></i></li>
-          <li>Trainings<i class="fas fa-angle-down"></i></li>
-          <li>Partisipants<i class="fas fa-angle-down"></i></li>
-          <li>Contacts<i class="fas fa-angle-down"></i></li>
-          <li>Opportunities<i class="fas fa-angle-down"></i></li>
+          <li class="chosen"><a href="/manage/home">Home</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/trainingCourses">Training Courses</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/trainings">Trainings</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/participants">Partisipants</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/contacts">Contacts</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/opportunities">Opportunities</a><i class="fas fa-angle-down"></i></li>
           <li>More<i class="fas fa-caret-down"></i></li>
         </ul>
       </nav>

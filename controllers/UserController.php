@@ -31,7 +31,6 @@
           setcookie("login", $data['username'], time() + (3600 * 24 * 30) );
           setcookie("password", $this->encryptCookie($data["password"]), time() + (3600 * 24 * 30) );
         }
-        echo $this->encryptCookie($data["password"]);
         $login = $data['username'];
         $password = $data['password'];
 

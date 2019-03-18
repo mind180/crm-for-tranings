@@ -55,7 +55,7 @@ header > .line-2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 40px;
+  height: 43px;
   border-bottom: 3px solid #0051a8;
   padding: 0 10px;
 }
@@ -95,6 +95,16 @@ header > .line-2 {
   transition: background-color 100ms linear;
 }
 
+.part-nav_list li a{
+  text-decoration: none;
+  color: black;
+}
+
+.part-nav_list .chosen {
+  background-color: #edf3ff;
+  border-top: 3px solid #0051a8;
+}
+
 .part-nav_list li i{
   padding-left: 5px;
 
@@ -102,7 +112,7 @@ header > .line-2 {
 
 /* ---------------------------------------------------------- ~header layout */
 
-/* ------------------------- header layout --------------------------------- */
+/* ------------------------- content layout --------------------------------- */
 
 .canvas{
   background-color: #8caadb;
@@ -175,12 +185,51 @@ input[type="button"]:hover {
   align-items:flex-end;
 }
 
+
 .header-line-2 .table-info{
   font-size: 12px;
 }
 
+
 .manage-table{
   height: 500px;
 }
+/*  table bem */
 
-/* ---------------------------------------------------------- header layout  */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__row {
+  font-size: 12px;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  background-color: #fff;
+}
+
+.table__row:hover {
+  background-color: rgb(244, 243, 242);
+}
+
+.table__row_head{
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgb(251, 250, 249);
+}
+
+
+.table__cell{
+  padding: 5px;
+}
+
+.table__cell:hover{
+  background-color: #dedede;
+}
+
+
+/*  table bem */
+
+
+/* ---------------------------------------------------------- content layout  */
