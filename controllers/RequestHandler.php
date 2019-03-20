@@ -10,10 +10,18 @@ abstract class RequestHandler{
 
   public function handleRequest()
   {
-    $tableObject = $this->getTableObject();
-    $tableObject->test();
-  }
+    $tableDataSet = array();
 
+    //create concreate tableObject
+    $tableObject = $this->getTableObject();
+
+    $tableDataSet["column_names"] = $tableObject->getTableColumnNames();
+
+    $tableDataSet["records"] = $tableObject->getTableDataArray();
+
+    echo json_encode($tableDataSet);
+
+  }
 
 }
 

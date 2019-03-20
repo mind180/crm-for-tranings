@@ -7,7 +7,7 @@
     'news' =>  'news/index',
     //'manage/trainings' => 'manage/trainings',
     'manage/([a-z]+)' => 'manage/indexer/$1',
-    'manage' => 'manage/indexer/home',
+    'manage' => 'manage/home',
     'test' => 'test/test',
   );
 ?>

@@ -22,7 +22,7 @@ function imgRequest(e){
   xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
 
   xhr.onreadystatechange = function(e) {
-    if (this.readyState != 4) return;
+    if (thi s.readyState != 4) return;
 
     try{
       var image = JSON.parse(this.responseText);
