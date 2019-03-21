@@ -1,4 +1,5 @@
-  <header>
+
+  <header >
     <div class="line-1">
 
       <div class="part-logo">
@@ -34,6 +35,9 @@
           <li><a href="/manage/participants">Partisipants</a><i class="fas fa-angle-down"></i></li>
           <li><a href="/manage/contacts">Contacts</a><i class="fas fa-angle-down"></i></li>
           <li><a href="/manage/opportunities">Opportunities</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/products">Products</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/surveys">Surveys</a><i class="fas fa-angle-down"></i></li>
+          <li><a href="/manage/reports">Reports</a><i class="fas fa-angle-down"></i></li>
           <li>More<i class="fas fa-caret-down"></i></li>
         </ul>
       </nav>

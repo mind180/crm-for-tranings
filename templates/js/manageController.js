@@ -10,6 +10,69 @@ for(let i=0; i<aItems.length; i++){
 }
 
 
+
+
+var newButton = document.getElementById("new_btn");
+newButton.addEventListener("click", showModalWindow);
+
+function showModalWindow(event)
+{
+  var createWindow = document.getElementById("modal_window");
+  createWindow.style.display = "block";
+
+  window.setTimeout( function() {
+    var mf  = document.querySelector(".modal-form");
+    mf.classList.add("modal-form_shown");
+  }, 100);
+
+}
+
+function getModalWindowFileds(){
+
+  var methodName = "insert";
+  var tableName = document.querySelector(".caption-title__name").innerText;
+
+
+  var addr = "/manage/" + tableName + methodName;
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.open("POST", addr, true);
+
+  xhr.onreadystatechange = function(e) {
+    if (this.readyState != 4) return;
+
+      //alert(this.status + " " + this.statusText);
+    console.log( this.responseText );
+
+    try{
+      var fields = JSON.parse(this.responseText);
+    }
+    catch(e){
+      alert("JSON parse error: " + e.massage);
+    }
+
+    return fields;
+  }
+
+  xhr.send();
+
+
+}
+
+
+var cancelButton = document.getElementById("modal_btn_cancel");
+cancelButton.addEventListener("click", closeModalWindow);
+
+function closeModalWindow(e){
+  var modalWindow = document.getElementById("modal_window");
+  modalWindow.style.display = "none";
+
+  var mf  = document.querySelector(".modal-form");
+  mf.classList.remove("modal-form_shown");
+}
+
+/*----------------------------------    table -------------------------------- */
 function getTableHead( columnNames )
 {
   var trHead = document.createElement("tr");
@@ -67,7 +130,11 @@ function getTableBody( dataSet )
   return tBody;
 }
 
-function renderTable(dataSet){
+function renderTable(dataSet, tableName){
+
+
+    var tableNamePlace = document.querySelector(".caption-title__name");
+    tableNamePlace.innerText = tableName;
 
     var table = document.getElementsByClassName("table")[0];
 
@@ -83,15 +150,28 @@ function renderTable(dataSet){
 
 
 }
-
+/*------------------------------------------------------------------   table  */
 
 function preventRedirect(e){
   e.preventDefault();
 }
 
 
+function setChosenLink(link){
+
+  var links = document.querySelectorAll(".part-nav_list li");
+  for(let i =0; i < links.length; i++ ){
+    links[i].classList.remove("chosen");
+  }
+
+  link.classList.add("chosen");
+}
+
+
 
 function getTableData(e){
+
+  setChosenLink(e.currentTarget);
 
   var addr = e.currentTarget.firstChild;
 
@@ -111,7 +191,7 @@ function getTableData(e){
       alert("JSON parse error: " + e);
     }
 
-    renderTable(dataSet);
+    renderTable(dataSet, addr.innerText);
 
   }
 

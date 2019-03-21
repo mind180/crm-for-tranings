@@ -6,7 +6,8 @@
     'registration' => 'user/registration',
     'news' =>  'news/index',
     //'manage/trainings' => 'manage/trainings',
-    'manage/([a-z]+)' => 'manage/indexer/$1',
+    'manage/([a-z]+)/([a-z]+)' => 'manage/indexer/$1/$2',
+      'manage/([a-z]+)' => 'manage/indexer/$1',
     'manage' => 'manage/home',
     'test' => 'test/test',
   );

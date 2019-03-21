@@ -5,6 +5,7 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
+
 }
 /* ------------------------- header layout --------------------------------- */
 header > .line-1 {
@@ -162,7 +163,7 @@ header > .line-2 {
    justify-content: flex-start;
  }
 
-input[type="button"]{
+.button{
   width: 75px;
   height: 35px;
   border: 1px solid #cecece;
@@ -172,9 +173,18 @@ input[type="button"]{
   font-size: 14px;
 }
 
-input[type="button"]:hover {
+.button:hover {
   cursor: pointer;
   background-color: rgb(244, 243, 242);
+}
+
+.button_color_blue{
+  color: #fff;
+  background-color: #2557a8;
+}
+
+.button_color_blue:hover{
+  background-color: #1f4889;
 }
 
 
@@ -232,4 +242,98 @@ input[type="button"]:hover {
 /*  table bem */
 
 
+
+
 /* ---------------------------------------------------------- content layout  */
+
+
+/*----------------------------- new form -----------------------------------  */
+
+#modal_window{
+  display: none;
+}
+
+.panel{
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.form-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+
+
+.modal-form{
+
+  opacity: 0;
+  position: relative;
+  max-width: 840px;
+  min-width: 480px;
+  width: 70%;
+  margin: 100px auto;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+
+}
+
+.modal-form_shown{
+  opacity: 1;
+}
+
+.modal-form__header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 3px solid rgb(225, 225, 225);
+}
+
+.modal-form__header-title{
+
+}
+
+.modal-form__content{
+  padding: 20px;
+}
+
+.modal-form__footer{
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: rgb(244, 243, 242);
+  border-top: 3px solid rgb(225, 225, 225);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+/*---------------------------------------------------------------- new form   */
